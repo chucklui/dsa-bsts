@@ -55,12 +55,12 @@ class BinarySearchTree {
 
   insertRecursively(val, node=this.root) {
     const newNode = new Node(val);
-    
+
     if (node === null) {
-      node = newNode;
+      this.root = newNode;
       return this;
     }
-
+    
     if(node.val < val) {
       if(node.right === null) {
         node.right = newNode;
